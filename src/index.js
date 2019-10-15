@@ -10,8 +10,8 @@ function expressionCalculator(expr) {
 
     if(left.length !== right.length) throw "ExpressionError: Brackets must be paired";
     if (expr.includes("/ 0") || expr.includes("/0")) throw "TypeError: Division by zero.";
-    var r = new Function('return '+ expr );
-    var res = +r();
+    let res = new Function('return '+ expr )();
+    
 
     if (res == Infinity) throw "TypeError: Division by zero.";
 
